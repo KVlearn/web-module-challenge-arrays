@@ -193,23 +193,28 @@ and should return the average number of words per item in the array.
 For example, getAverageWordLength(originalFlavors) should return a number between 0 and 3. */
 
 
-getAverageWordLength(originalFlavors);
+mySet=['Tesla','Tesla Model3','Tesla Model X','Tesla Model ModelY']
+// Total number of words:9, total array count :4//
+// getAverageWordLength(originalFlavors);
+getAverageWordLength(mySet);
 
 function getAverageWordLength(yourArray){
  let numOfWords=0;
  let avg=0;
  for(i=0;i<yourArray.length;i++){
    /*The split() method is used to split a string into an array of substrings, and returns the new array*/
-   splitArray=yourArray[i].split(" ")
-   console.log('Aftersplit= ' + splitArray);
-   numOfWords= numOfWords + (splitArray.length);  
+   /*Gets split word in to seperate array, say "Lemon crisp" to [lemon,crisp]"*/
+   afterSplit=yourArray[i].split(" ")
+   console.log('Aftersplit= ' + afterSplit);
+   /*Count the length when we split the words each time */ 
+   numOfWords= numOfWords + afterSplit.length;  
+   console.log('numofWords=' + afterSplit.length);
  }
 console.log('Total Number of Words = '+ numOfWords);
-console.log('Length of Your split Array = ' + splitArray.length);
-avg= (numOfWords / splitArray.length);
+console.log('Length of Your Array = ' + yourArray.length);
+avg= (numOfWords / yourArray.length);
 console.log('Average Words in Each of your Array item: ' + avg);
 }
-
 
 /* STRETCH 2: Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors.
 
