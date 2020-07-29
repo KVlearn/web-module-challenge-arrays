@@ -50,7 +50,8 @@ function is31Flavors(inputArray){
 let myLength=0;
 const totLength=31;
 myLength=inputArray.length;
-return(Boolean(myLength===totLength));
+return((myLength===totLength));
+// return(Boolean(myLength===totLength));
 }
 
 /* Task 2: Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -86,7 +87,7 @@ For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", 
 function removeLastFlavor(inputArray){
     /* pop() method removes last item in an array */
     inputArray.pop();
-    console.log(inputArray);
+    console.log('After pop' + inputArray);
     /* note for me :pop() returns that removed one element when used in return statement */
 }
 removeLastFlavor(originalFlavors);
@@ -203,7 +204,7 @@ function getAverageWordLength(yourArray){
  let avg=0;
  for(i=0;i<yourArray.length;i++){
    /*The split() method is used to split a string into an array of substrings, and returns the new array*/
-   /*Gets split word in to seperate array, say "Lemon crisp" to [lemon,crisp]"*/
+   /*Gets split word into seperate array, say "Lemon crisp" to [lemon,crisp]"*/
    afterSplit=yourArray[i].split(" ")
    console.log('Aftersplit= ' + afterSplit);
    /*Count the length when we split the words each time */ 
