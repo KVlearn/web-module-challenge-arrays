@@ -304,24 +304,28 @@ var regionalFlavors = ["Pink Bubblegum",
 //  getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors,regionalFlavors);
  
  function getRandomFlavors(arrayA,arrayB,arrayC,arrayD){
-  let randomFlavors=[];
+  let randomFlavors=[]; /* is out output randome array */
   let randomChoice=0;   
   let outArraysize=31;
   let randomIndex=0;
   for(i=0;i<31;i++) 
-  {
+  {/* Get a randome choice as to which array to work with among A,B,C and D*/
    randomChoice= Math.floor(Math.random()*4);
    console.log('randomchoice=' + randomChoice);
    if (randomChoice===0){
+     /* Get a random index from arrayA, push that element to output array */
      randomIndex = Math.floor((Math.random() * arrayA.length));
      randomFlavors.push(arrayA[randomIndex]);
    }else if (randomChoice===1){
+     /* Get a random index from arrayB,push that element to output array */
      randomIndex = Math.floor((Math.random() * arrayB.length));
      randomFlavors.push(arrayB[randomIndex]);
    }else if (randomChoice===2){
+     /* Get a random index from arrayC,push that element to output array */
      randomIndex = Math.floor((Math.random() * arrayC.length));
      randomFlavors.push(arrayC[randomIndex]);
    }else if (randomChoice===3){
+     /* Get a random index from arrayD,push that element to output array */
      randomIndex = Math.floor((Math.random() * arrayD.length));
      randomFlavors.push(arrayD[randomIndex]);
    }
